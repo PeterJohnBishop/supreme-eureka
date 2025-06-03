@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  uploader:
+    build: .
+    container_name: uploader-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - uploader-data:/data
+
+volumes:
+  uploader-data:
